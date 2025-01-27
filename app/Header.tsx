@@ -13,9 +13,9 @@ function Header() {
                     <Image src={logo} className='w-24 h-10' alt="Logo" />
                 </Link>
                 {/* desktop navbar */}
-                <div className='hidden xl:flex items-center justify-between gap-4'>
+                <div className='hidden xl:flex items-center justify-between gap-20'>
                     <Navbar />
-                    <div className='rounded-full p-2 text-black bg-slate-200 flex items-center'>KD</div>
+                    <div className='rounded-full py-2 px-2.5 text-l font-semibold text-black bg-orange-600 flex items-center'>KD</div>
                 </div>
                 {/* mobile nav */}
                 <div className='xl:hidden'>Mobile nav</div>
