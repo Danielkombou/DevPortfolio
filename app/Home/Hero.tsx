@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import bulb from "../public/writings/icon.svg"
 
 type ButtonProps = { text: string, link: string }
 const Button = ({ text, link }: ButtonProps) => {

@@ -1,12 +1,16 @@
+"use client"
+
 import Link from 'next/link'
-import React from 'react'
-import Navbar from './Navbar'
+import React, { useState } from 'react'
+import Navbar, { MobileNavbar } from './Navbar'
 import logo from "../public/writings/Asset36.svg"
 import Image from 'next/image'
 
+
 function Header() {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <header className='bg-[#010823]'>
+        <header className='bg-[#010823] top-0 sticky z-[999] overflow-x-clip'>
             <div className='container py-8 px-4 md:px-8 flex items-center justify-between '>
                 {/* ticsummit logo */}
                 <Link href='/'>
@@ -18,7 +22,10 @@ function Header() {
                     <div className='rounded-full py-2 px-2.5 text-l font-semibold text-black bg-orange-600 flex items-center'>KD</div>
                 </div>
                 {/* mobile nav */}
-                <div className='xl:hidden'>Mobile nav</div>
+                <button className='lg:hidden block overflow-hidden outline-none z-40 text-xl font-semibold' onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? "+" : "x"}
+                </button>
+                    <MobileNavbar isOpen={isOpen} setIsOpen={!isOpen}/>
             </div>
         </header>
     )
